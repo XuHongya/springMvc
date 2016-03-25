@@ -13,6 +13,13 @@
 
        <mvc:annotation-driven />
 
+        <mvc:interceptors>
+            <mvc:interceptor>
+                <mvc:mapping path="/mvc/**"/>
+                <bean class="interceptor.myInterceptor"></bean>
+            </mvc:interceptor>
+        </mvc:interceptors>
+
        <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
              id="internalResourceViewResolver">
               <!-- 前缀 -->
